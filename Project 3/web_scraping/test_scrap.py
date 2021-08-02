@@ -15,7 +15,8 @@ class Test(unittest.TestCase):
             ws.scrap("vaishnavigupta")  
 
     def  test_user(self):
-        ws.scrap('ritvik.jain.52206')
+        self.assertEqual(ws.scrap('ritvik.jain.52206').city,'Roorkee')
+        self.assertEqual(ws.scrap('ritvik.jain.52206').name,'Ritvik Jain')
         
 
 if __name__ == '__main__':
