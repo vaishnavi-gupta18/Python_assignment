@@ -6,7 +6,7 @@ mydb = mysql.connector.connect(**dbconfig.config)
 mycursor = mydb.cursor()
     
 def get_data(username):
-    mycursor.execute("SELECT * FROM user where username = \'"+ username + "\'")
+    mycursor.execute("SELECT * FROM user where username = {}".format(username))
     myresult = mycursor.fetchall()
     return myresult
 
